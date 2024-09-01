@@ -11,10 +11,10 @@ const SignInScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>SignInScreen</Text>
-      <Button
-        title="signup"
-        onPress={() => navigation.navigate(AuthRoutes.SIGN_UP)}
-      />
+      {/*<Button*/}
+      {/*  title="signup"*/}
+      {/*  onPress={() => navigation.navigate(AuthRoutes.SIGN_UP)}*/}
+      {/*/>*/}
 
       <Input
         inputType={InputTypes.EMAIL}
@@ -28,7 +28,16 @@ const SignInScreen = ({ navigation }) => {
         onChangeText={(text) => setPassword(text)}
         styles={inputStyles}
       />
-      <Button />
+      <Button
+        title={'SIGNIN'}
+        onPress={() => navigation.navigate(AuthRoutes.SIGN_UP)}
+        styles={{
+          container: {
+            paddingHorizontal: 20,
+            marginTop: 20,
+          },
+        }}
+      />
     </View>
   );
 };
